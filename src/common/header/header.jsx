@@ -1,4 +1,4 @@
-import "./Header.css";
+import "./header.css";
 import { useState } from "react";
 import { CLink } from "../CLink/CLink";
 
@@ -18,7 +18,7 @@ export const Header = () => {
     const dispatch = useDispatch();
 
     useEffect(() => {
-        console.log(rdxUser, " credenciales pasaporte");
+
     }, [rdxUser]);
 
     const [criteria, setCriteria] = useState("");
@@ -37,12 +37,12 @@ export const Header = () => {
 
     return (
         <div className="header-design">
-            <CInput
+            {/*<CInput
                 type="text"
                 name="criteria"
                 value={criteria || ""}
                 changeEmit={searchHandler}
-            />
+    />*/}
             <CLink path="/" title="Home" />
             {rdxUser?.credentials?.token ? (
                 <div className="navigator-design">
@@ -57,7 +57,6 @@ export const Header = () => {
             ) : (
                 <div className="navigator-design">
                     <CLink path="/login" title="Login" />
-                    <CLink path="/register" title="Register" />
                 </div>
             )}
         </div>

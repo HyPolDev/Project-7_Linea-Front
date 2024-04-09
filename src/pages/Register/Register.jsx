@@ -1,6 +1,6 @@
 import "./Register.css"
 
-export const Home = () => {
+export const Register = () => {
     return (
         <>
             <div>C'est Register</div>
