@@ -15,6 +15,7 @@ export const Login = () => {
 
     const [credentials, setCredentials] = useState({
         email: "",
+        userName: "",
         password: "",
     });
 
@@ -54,9 +55,22 @@ export const Login = () => {
         }
     };
 
+    const registerMe = async () => {
+
+        const answer = await registerCall(credentials);
+        if (answer.data.newUser) {
+
+            loginMe();
+
+        }
+        else {
+            setMsg(`Wrong credentials`)
+        }
+    };
+
     return (
         <>
-            <div class="section">
+            <div class="section" id="bigbox">
                 <div class="container">
                     <div class="row full-height justify-content-center">
                         <div class="col-12 text-center align-self-center py-5">
@@ -108,18 +122,37 @@ export const Login = () => {
                                                 <div class="section text-center">
                                                     <h4 class="mb-3 pb-3">Sign Up</h4>
                                                     <div class="form-group">
-                                                        <input type="text" class="form-style" placeholder="UserName"></input>
+                                                        <CInput
+                                                            typeProp={"userName"}
+                                                            nameProp={"userName"}
+                                                            handlerProp={(e) => inputHandler(e)}
+                                                            placeholderProp={"user name"}
+                                                        />
                                                         <i class="input-icon uil uil-user"></i>
                                                     </div>
                                                     <div class="form-group mt-2">
-                                                        <input type="email" class="form-style" placeholder="Email"></input>
+                                                        <CInput
+                                                            typeProp={"email"}
+                                                            nameProp={"email"}
+                                                            handlerProp={(e) => inputHandler(e)}
+                                                            placeholderProp={"escribe tu e-mail"}
+                                                        />
                                                         <i class="input-icon uil uil-at"></i>
                                                     </div>
                                                     <div class="form-group mt-2">
-                                                        <input type="password" class="form-style" placeholder="Password"></input>
+                                                        <CInput
+                                                            typeProp={"password"}
+                                                            nameProp={"password"}
+                                                            handlerProp={(e) => inputHandler(e)}
+                                                            placeholderProp={"Password"}
+                                                        />
                                                         <i class="input-icon uil uil-lock-alt"></i>
                                                     </div>
-                                                    <a href="https://www.web-leb.com/code" class="btn mt-4">Register</a>
+                                                    <ButtonC
+                                                        title={"Register"}
+                                                        className={"btn mt-4"}
+                                                        functionEmit={loginMe}
+                                                    />
                                                 </div>
                                             </div>
                                         </div>

@@ -10,7 +10,7 @@ export const CInput = ({ typeProp, nameProp, changeEmit, placeholderProp }) => {
             type={typeProp}
             name={nameProp}
             placeholder={placeholderProp}
-            onChange={(e) => changeEmit(e)}
+            onChange={(e) => changeEmit}
         />
     )
 }

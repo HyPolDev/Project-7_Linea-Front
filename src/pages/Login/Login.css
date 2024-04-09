@@ -6,7 +6,14 @@ body {
     line-height: 1.7;
     color: #ffeba7;
     background-color: #1f2029;
+    max-width: 100vw;
+    max-height: 100vh;
 
+}
+
+#bigbox {
+    height: 100vh;
+    width: auto;
 }
 
 a:hover {
@@ -42,7 +49,7 @@ h6 span {
 }
 
 .full-height {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 [type="checkbox"]:checked,
@@ -117,6 +124,7 @@ h6 span {
     position: absolute;
     border-radius: 6px;
     -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
 }
 
 .card-back {
