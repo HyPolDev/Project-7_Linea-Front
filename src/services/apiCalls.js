@@ -54,9 +54,60 @@ export const registerCall = async (user) => {
             dispatch(logout({ credentials: "" }))
         }
 
-        console.log(data);
+
         return data;
     } catch (error) {
+        return error;
+    }
+};
+
+export const getUserCall = async (token, userName) => {
+    const options = {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+        },
+    };
+
+    try {
+        const response = await fetch(root + "/users/" + userName, options);
+
+        const data = await response.json();
+
+        if (!data.success) {
+            throw new Error(data.message);
+        }
+        console.log("PROFILE INFO DATA ", data);
+        return data;
+    } catch (error) {
+        console.log(error)
+        return error;
+    }
+};
+
+export const getUserPostsCall = async (token, userName) => {
+    const options = {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({ userName: userName })
+    };
+
+    try {
+        const response = await fetch(root + "/posts/user", options);
+
+        const data = await response.json();
+
+        if (!data.success) {
+            throw new Error(data.message);
+        }
+        console.log("POSTS INFO DATA", data);
+        return data;
+    } catch (error) {
+        console.log(error)
         return error;
     }
 };

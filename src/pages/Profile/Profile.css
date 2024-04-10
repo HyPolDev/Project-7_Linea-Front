@@ -1,0 +1,63 @@
+.heading {
+    height: 4rem;
+    margin-top: 1em;
+    position: sticky;
+}
+
+.wrapper {
+    border-left: 1px solid rgba(255, 255, 255, 0.275);
+    border-right: 1px solid rgba(255, 255, 255, 0.275);
+}
+
+.arrow {
+    font-size: 3em;
+    color: white;
+    cursor: pointer;
+    top: revert;
+    left: revert;
+}
+
+.arrow-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: none;
+    min-height: 3rem;
+    min-width: 3rem;
+    max-height: 3rem;
+    max-width: 3rem;
+    top: 1.2rem;
+    left: 1rem;
+    background-color: black;
+    border-radius: 100%;
+}
+
+.arrow-box:hover {
+    background-color: rgba(66, 66, 66, 0.349);
+    transition: 0.5s cubic-bezier(0.75, 0.82, 0.165, 1);
+}
+
+.user-name {
+    position: relative;
+    top: 1rem;
+    left: 3rem;
+}
+
+p {
+    position: relative;
+    top: 0.7rem;
+    left: 3rem;
+    color: rgba(255, 255, 255, 0.384);
+}
+
+.full-name {
+    position: relative;
+    top: 4em;
+    left: 3em;
+
+}
+
+.little-user-name {
+    position: relative;
+    top: 2.5em;
+}

@@ -5,6 +5,7 @@ import { Header } from "../../common/header/header";
 import { useSelector, useDispatch } from "react-redux";
 import { userData, logout } from "../../app/slices/userSlice";
 import { useEffect } from "react";
+import { Profile } from "../Profile/Profile";
 
 export const Body = () => {
 
@@ -22,7 +23,7 @@ export const Body = () => {
                     <Routes>
                         <Route path="*" element={<Navigate to={"/"} replace />} />
                         <Route path="/" element={<Home />} />
-                        <Route path="/Profile" element={<Home />} />
+                        <Route path="/Profile" element={<Profile />} />
                     </Routes>
                 </>)
                 : (<Login />)}

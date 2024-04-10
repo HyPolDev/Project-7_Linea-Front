@@ -128,7 +128,7 @@ export const Login = () => {
                                                             typeProp={"userName"}
                                                             nameProp={"userName"}
                                                             handlerProp={(e) => inputHandler(e)}
-                                                            placeholderProp={"user name"}
+                                                            placeholderProp={"Username"}
                                                         />
                                                         <i className="input-icon uil uil-user"></i>
                                                     </div>
@@ -137,7 +137,7 @@ export const Login = () => {
                                                             typeProp={"email"}
                                                             nameProp={"email"}
                                                             handlerProp={(e) => inputHandler(e)}
-                                                            placeholderProp={"escribe tu e-mail"}
+                                                            placeholderProp={"Email"}
                                                         />
                                                         <i className="input-icon uil uil-at"></i>
                                                     </div>
