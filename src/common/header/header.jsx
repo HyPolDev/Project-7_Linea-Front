@@ -36,17 +36,16 @@ export const Header = () => {
     }, [criteria]);
 
     return (
-        <div className="header-design">
-            {/*<CInput
-                type="text"
-                name="criteria"
-                value={criteria || ""}
-                changeEmit={searchHandler}
-    />*/}
-            <CLink path="/" title="Home" />
+        <div className="col-4 header-design">
+
+
             {rdxUser?.credentials?.token ? (
                 <div className="navigator-design">
-                    <CLink path="/profile" title={rdxUser?.credentials?.user?.name} />
+                    <CLink path="/" title="Home" />
+                    <CLink path="/" title="Explore" />
+                    <CLink path="/" title="Bookmarks" />
+                    <CLink path="/profile" title="Profile" />
+                    <CLink path="#" title={rdxUser?.credentials?.decoded?.userName} />
                     <div
                         className="out-design"
                         onClick={() => dispatch(logout({ credentials: "" }))}

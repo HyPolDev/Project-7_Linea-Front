@@ -24,7 +24,7 @@ export const loginCall = async (user) => {
             dispatch(logout({ credentials: "" }))
         }
 
-        console.log(data);
+
         return data;
     } catch (error) {
         return error;

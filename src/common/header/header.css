@@ -1,17 +1,17 @@
 .header-design {
-    height: 12vh;
-    width: 100vw;
-
+    height: 100vh;
     background-color: black;
     color: white;
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
 }
 
 .navigator-design {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 .out-design {
