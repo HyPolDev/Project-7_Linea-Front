@@ -1,14 +1,10 @@
 import "./header.css";
 import { useState } from "react";
 import { CLink } from "../CLink/CLink";
-
-//RDX
-
 import { useSelector, useDispatch } from "react-redux";
 import { userData, logout } from "../../app/slices/userSlice";
 import { updateCriteria } from "../../app/slices/searchSlice";
 import { useEffect } from "react";
-import { CInput } from "../CInput/CInput";
 
 export const Header = () => {
     //Instancia de conexion a modo lectura
