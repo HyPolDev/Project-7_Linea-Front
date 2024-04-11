@@ -5,7 +5,8 @@ export const ButtonC = ({ title, functionEmit, className }) => {
 
     return (
         <div className={className}
-            onClick={functionEmit}>{title}
+            onClick={functionEmit}
+            title={title}>
         </div>
     )
 }

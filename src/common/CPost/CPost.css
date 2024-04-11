@@ -1,0 +1,41 @@
+.post-heading {
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 0.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.post-author {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0.36rem;
+}
+
+.post-timestamp {
+    left: 0.8rem;
+    font-weight: 100;
+}
+
+.text {
+    position: relative;
+    top: 1rem;
+    left: 0;
+    font-size: 0.9rem;
+    color: white;
+}
+
+.heart {
+    position: absolute;
+    top: 0.37rem;
+    left: 2.6rem;
+    color: red;
+
+}
+
+.nav-post-actions {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.384);
+}

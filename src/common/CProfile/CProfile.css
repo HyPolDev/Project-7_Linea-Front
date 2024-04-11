@@ -1,6 +1,20 @@
 .heading {
+    position: fixed;
     height: 3rem;
-    margin-top: 1.5em;
+    margin-top: 0em;
+    display: flex;
+    flex-direction: row;
+    z-index: 3;
+}
+
+.heading-background {
+    height: 4.5rem;
+    left: 33.33vw;
+    border-left: 1px solid rgba(255, 255, 255, 0.275);
+    width: 40.3vw;
+    position: fixed;
+    background-color: black;
+    z-index: 2;
 }
 
 
@@ -41,26 +55,26 @@
 .user-name {
     position: relative;
     top: 1rem;
-    left: 3rem;
+    left: 2rem;
 }
 
 p {
     position: relative;
     top: 0.7rem;
-    left: 3rem;
+    left: 2rem;
     color: rgba(255, 255, 255, 0.384);
 }
 
 .full-name {
     position: relative;
-    top: 4em;
-    left: 3em;
+    top: 5em;
+    left: 2em;
 
 }
 
 .little-user-name {
     position: relative;
-    top: 3em;
+    top: 4em;
     color: rgba(255, 255, 255, 0.384);
     font-size: medium;
 }

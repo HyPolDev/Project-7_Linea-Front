@@ -35,7 +35,7 @@ export const CProfile = ({ userName }) => {
 
     return (
         <>
-            <div className="row heading">
+            <div className="heading">
                 <div className="col-2 arrow-box" onMouseUp={() => navigateHome()}>
                     <i className="input-icon uil uil-arrow-left arrow"></i>
                 </div>
@@ -44,6 +44,7 @@ export const CProfile = ({ userName }) => {
                     <p className="n-posts">{Data?.posts?.length} Posts</p>
                 </div>
             </div>
+            <div className="row-12 heading-background"></div>
             <div className="row full-name">
                 <h6>
                     {Data?.profile?.fisrtName ? Data.profile.fisrtName + " " : ""}

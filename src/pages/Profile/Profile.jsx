@@ -8,6 +8,8 @@ import { useEffect, useState } from "react";
 import { CLink } from "../../common/CLink/CLink";
 import { Home } from "../Home/Home";
 import { CProfile } from "../../common/CProfile/CProfile";
+import { ButtonC } from "../../common/ButtonC/ButtonC";
+import { CPost } from "../../common/CPost/CPost";
 
 export const Profile = () => {
     const navigate = useNavigate();
@@ -32,9 +34,14 @@ export const Profile = () => {
 
     }, [])
 
+    useEffect(() => {
+
+    }, [Data])
+
     const navigateHome = () => {
         navigate("/")
     }
+
 
     return (
         <>
@@ -42,9 +49,18 @@ export const Profile = () => {
                 <CProfile
                     userName={`${userName}`}
                 />
-                <div className="row-12 ">
 
-                </div>
+                {Data?.posts.length > 0 ?
+                    <div>{Data?.posts?.map((element) => {
+                        return (
+                            <CPost
+                                key={element._id}
+                                post={element}>
+                            </CPost>
+                        )
+                    })}</div> :
+                    <div className="no-posts">There are no Posts</div>
+                }
             </div>
         </>
     )
