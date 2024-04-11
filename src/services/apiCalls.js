@@ -78,7 +78,7 @@ export const getUserCall = async (token, userName) => {
         if (!data.success) {
             throw new Error(data.message);
         }
-        console.log("PROFILE INFO DATA ", data);
+
         return data;
     } catch (error) {
         console.log(error)
@@ -104,7 +104,7 @@ export const getUserPostsCall = async (token, userName) => {
         if (!data.success) {
             throw new Error(data.message);
         }
-        console.log("POSTS INFO DATA", data);
+
         return data;
     } catch (error) {
         console.log(error)

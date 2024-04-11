@@ -1,12 +1,13 @@
 .heading {
-    height: 4rem;
-    margin-top: 1em;
-    position: sticky;
+    height: 3rem;
+    margin-top: 1.5em;
 }
+
 
 .wrapper {
     border-left: 1px solid rgba(255, 255, 255, 0.275);
     border-right: 1px solid rgba(255, 255, 255, 0.275);
+
 }
 
 .arrow {
@@ -59,5 +60,25 @@ p {
 
 .little-user-name {
     position: relative;
-    top: 2.5em;
+    top: 3em;
+    color: rgba(255, 255, 255, 0.384);
+    font-size: medium;
+}
+
+.about {
+    top: 0;
+    left: 0;
+    font-size: 0.9rem;
+    color: white;
+}
+
+#followers {
+    left: 2rem;
+}
+
+.nav-post {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.384);
 }
