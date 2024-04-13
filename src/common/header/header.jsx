@@ -37,11 +37,11 @@ export const Header = () => {
 
             {rdxUser?.credentials?.token ? (
                 <div className="navigator-design">
-                    <CLink path="/" title="Home" />
-                    <CLink path="/" title="Explore" />
-                    <CLink path="/" title="Bookmarks" />
-                    <CLink path="/profile" title="Profile" />
-                    <CLink path="#" title={rdxUser?.credentials?.decoded?.userName} />
+                    <div id="link"><CLink path="/" title="Home" /></div>
+                    <div id="link"><CLink path="/" title="Explore" /></div>
+                    <div id="link"><CLink path="/" title="Bookmarks" /></div>
+                    <div id="link"><CLink path="/profile" title="Profile" /></div>
+                    <div id="link"><CLink path="#" title={rdxUser?.credentials?.decoded?.userName} /></div>
                     <div
                         className="out-design"
                         onClick={() => dispatch(logout({ credentials: "" }))}

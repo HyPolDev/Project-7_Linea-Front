@@ -28,7 +28,6 @@ export const Login = () => {
             ...prevState,
             [e.target.name]: e.target.value,
         }));
-        console.log(e.target.name, e.target.value);
     };
 
     const loginMe = async () => {
@@ -47,7 +46,6 @@ export const Login = () => {
             dispatch(login({ credentials: passport }));
 
             setMsg(`Welcome again ${decoded.name}`);
-            console.log(passport);
             setTimeout(() => {
                 navigate("/");
             }, 1000);

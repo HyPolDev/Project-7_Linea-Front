@@ -81,7 +81,6 @@ export const getUserCall = async (token, userName) => {
 
         return data;
     } catch (error) {
-        console.log(error)
         return error;
     }
 };
@@ -107,7 +106,30 @@ export const getUserPostsCall = async (token, userName) => {
 
         return data;
     } catch (error) {
-        console.log(error)
+        return error;
+    }
+};
+
+export const getPostsCall = async (token) => {
+    const options = {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+        }
+    };
+
+    try {
+        const response = await fetch(root + "/posts/", options);
+
+        const data = await response.json();
+
+        if (!data.success) {
+            throw new Error(data.message);
+        }
+        console.log(data)
+        return data;
+    } catch (error) {
         return error;
     }
 };

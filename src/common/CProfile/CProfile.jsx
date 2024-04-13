@@ -28,7 +28,6 @@ export const CProfile = ({ userName }) => {
 
     }, [])
 
-    console.log(Data);
     const navigateHome = () => {
         navigate("/")
     }

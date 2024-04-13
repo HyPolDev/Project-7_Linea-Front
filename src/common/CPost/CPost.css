@@ -28,12 +28,18 @@
     color: white;
 }
 
-.heart {
+#heart {
     position: absolute;
-    top: 0.37rem;
-    left: 2.6rem;
+    top: 0.38rem;
+    left: 1.5rem;
     color: red;
 
+}
+
+#sandwich {
+    position: absolute;
+    top: 0.37rem;
+    cursor: pointer;
 }
 
 .nav-post-actions {

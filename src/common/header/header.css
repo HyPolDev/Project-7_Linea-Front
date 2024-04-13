@@ -11,8 +11,7 @@
 }
 
 .navigator-design {
-    display: flex;
-    flex-direction: column;
+    display: grid;
 }
 
 .out-design {
@@ -28,4 +27,8 @@
     transition: 0.3s;
     color: black;
     cursor: pointer;
+}
+
+#link {
+    justify-self: start;
 }

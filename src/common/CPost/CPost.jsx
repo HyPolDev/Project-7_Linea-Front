@@ -33,18 +33,21 @@ export const CPost = ({ post }) => {
             <div className="row-12">
                 <div className="row mt-3 nav-post-actions">
                     <div className="col-3">
-                        <i className="input-icon uil uil-heart heart"></i>
+                        <i className="input-icon uil uil-heart" id="heart"></i>
                         <CLink path="/" title={`${post.likes.length}`} />
                     </div>
                     <div className="col-3">
-                        <CLink path="/" title={`${post.likes.length}`} />
+                        <i className="input-icon uil uil-comment" id="sandwich"></i>
+                        <CLink path="/" title={`${post.comments.length}`} />
                     </div>
                     <div className="col-3">
-                        <CLink path="/" title="Likes" />
+                        <i className="input-icon uil uil-repeat" id="sandwich"></i>
+                        <CLink path="/" title={`${post.likes.length}`} />
                     </div>
                     {post?.authorName == userName ? (
                         <div className="col-3">
-                            <CLink path="/" title="Saves" />
+                            <i className="input-icon uil uil-bookmark" id="sandwich"></i>
+
                         </div>
                     ) : ""
                     }

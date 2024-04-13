@@ -1,11 +1,12 @@
 .clink-design {
-
+    position: relative;
+    z-index: 5;
     color: white;
     font-weight: bold;
     display: flex;
     align-items: center;
     margin: 1em;
-
+    justify-content: center;
     transition: 0.3s;
 }
 
