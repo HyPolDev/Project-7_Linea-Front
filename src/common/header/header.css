@@ -1,0 +1,34 @@
+.header-design {
+    height: 100vh;
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    position: sticky;
+}
+
+.navigator-design {
+    display: grid;
+}
+
+.out-design {
+    color: white;
+    font-weight: bold;
+
+    margin: 1em;
+
+    transition: 0.3s;
+}
+
+.out-design:hover {
+    transition: 0.3s;
+    color: black;
+    cursor: pointer;
+}
+
+#link {
+    justify-self: start;
+}
