@@ -70,6 +70,7 @@ export const Login = () => {
 
     return (
         <>
+            <div className="background">Line</div>
             <div className="section" id="bigbox">
                 <div className="container">
                     <div className="row full-height justify-content-center">

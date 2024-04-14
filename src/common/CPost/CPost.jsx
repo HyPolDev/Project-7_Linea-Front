@@ -44,13 +44,11 @@ export const CPost = ({ post }) => {
                         <i className="input-icon uil uil-repeat" id="sandwich"></i>
                         <CLink path="/" title={`${post.likes.length}`} />
                     </div>
-                    {post?.authorName == userName ? (
-                        <div className="col-3">
-                            <i className="input-icon uil uil-bookmark" id="sandwich"></i>
+                    <div className="col-3">
+                        <i className="input-icon uil uil-bookmark" id="sandwich"></i>
 
-                        </div>
-                    ) : ""
-                    }
+                    </div>
+
 
                 </div>
             </div>

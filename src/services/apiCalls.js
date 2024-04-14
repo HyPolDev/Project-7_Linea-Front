@@ -103,7 +103,7 @@ export const getUserPostsCall = async (token, userName) => {
         if (!data.success) {
             throw new Error(data.message);
         }
-
+        data.data.reverse()
         return data;
     } catch (error) {
         return error;
@@ -127,7 +127,33 @@ export const getPostsCall = async (token) => {
         if (!data.success) {
             throw new Error(data.message);
         }
-        console.log(data)
+        data.posts.reverse()
+        return data
+    } catch (error) {
+        return error;
+    }
+};
+
+export const postPostCall = async (token, text) => {
+    console.log("function called");
+    const options = {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({ text: text })
+    };
+
+    try {
+        const response = await fetch(root + "/posts/", options);
+
+        const data = await response.json();
+
+        if (!data.success) {
+            throw new Error(data.message);
+        }
+
         return data;
     } catch (error) {
         return error;
