@@ -1,4 +1,6 @@
 import axios from "axios";
+import { useSelector } from "react-redux";
+import { userData, logout } from "../app/slices/userSlice";
 const root = "http://localhost:4000";
 
 export const loginCall = async (user) => {
@@ -61,7 +63,7 @@ export const registerCall = async (user) => {
     }
 };
 
-export const getUserCall = async (token, userName) => {
+export const getUserCall = async (token, name) => {
     const options = {
         method: "GET",
         headers: {
@@ -71,7 +73,7 @@ export const getUserCall = async (token, userName) => {
     };
 
     try {
-        const response = await fetch(root + "/users/" + userName, options);
+        const response = await fetch(root + "/users/" + name, options);
 
         const data = await response.json();
 
@@ -85,14 +87,14 @@ export const getUserCall = async (token, userName) => {
     }
 };
 
-export const getUserPostsCall = async (token, userName) => {
+export const getUserPostsCall = async (token, name) => {
     const options = {
         method: "PUT",
         headers: {
             "Content-Type": "application/json",
             Authorization: `Bearer ${token}`,
         },
-        body: JSON.stringify({ userName: userName })
+        body: JSON.stringify({ userName: name })
     };
 
     try {
@@ -135,7 +137,6 @@ export const getPostsCall = async (token) => {
 };
 
 export const postPostCall = async (token, text) => {
-    console.log("function called");
     const options = {
         method: "POST",
         headers: {
@@ -147,6 +148,32 @@ export const postPostCall = async (token, text) => {
 
     try {
         const response = await fetch(root + "/posts/", options);
+
+        const data = await response.json();
+
+        if (!data.success) {
+            throw new Error(data.message);
+        }
+
+        return data;
+    } catch (error) {
+        return error;
+    }
+};
+
+export const editProfileCall = async (token, body, userName) => {
+
+    const options = {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify(body)
+    };
+
+    try {
+        const response = await fetch(root + "/users/" + userName, options);
 
         const data = await response.json();
 

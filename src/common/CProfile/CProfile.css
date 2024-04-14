@@ -69,7 +69,6 @@ p {
     position: relative;
     top: 5em;
     left: 2em;
-
 }
 
 .little-user-name {
@@ -95,4 +94,9 @@ p {
     justify-content: center;
     align-items: center;
     border-bottom: 1px solid rgba(255, 255, 255, 0.384);
+}
+
+.edit-button {
+    position: static;
+    left: 20em;
 }

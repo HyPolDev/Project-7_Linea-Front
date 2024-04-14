@@ -25,7 +25,6 @@ export const Body = () => {
                         <Route path="*" element={<Navigate to={"/"} replace />} />
                         <Route path="/" element={<Home />} />
                         <Route path="/Profile" element={<Profile />} />
-                        <Route path="/casa" element={<CProfile />} />
                     </Routes>
                 </>)
                 : (<Login />)}

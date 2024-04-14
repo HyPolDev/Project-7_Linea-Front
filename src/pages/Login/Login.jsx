@@ -4,7 +4,7 @@ import { ButtonC } from "../../common/ButtonC/ButtonC";
 import { useEffect, useState } from "react";
 import { decodeToken } from "react-jwt";
 import "./Login.css";
-import { loginCall } from "../../services/apiCalls";
+import { loginCall, registerCall } from "../../services/apiCalls";
 import { useDispatch } from "react-redux";
 import { login } from "../../app/slices/userSlice";
 
@@ -58,7 +58,7 @@ export const Login = () => {
     const registerMe = async () => {
 
         const answer = await registerCall(credentials);
-        if (answer.data.newUser) {
+        if (answer.success) {
 
             loginMe();
 
@@ -110,11 +110,12 @@ export const Login = () => {
                                                     {//<a href="https://www.web-leb.com/code" className="btn mt-4">Login</a>
                                                     }
                                                     <ButtonC
-                                                        title={"log me!"}
+                                                        title={"Log me!"}
                                                         className={"btn mt-4"}
                                                         functionEmit={loginMe}
                                                     />
                                                     <p className="mb-0 mt-4 text-center"><a href="#" className="link">Forgot your password?</a></p>
+                                                    <p className="mb-0 mt-4 text-center msg">{msg}</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -150,10 +151,11 @@ export const Login = () => {
                                                         <i className="input-icon uil uil-lock-alt"></i>
                                                     </div>
                                                     <ButtonC
-                                                        title={"Register"}
+                                                        title={"Register me!"}
                                                         className={"btn mt-4"}
-                                                        functionEmit={loginMe}
+                                                        functionEmit={registerMe}
                                                     />
+                                                    <p className="mb-0 mt-4 text-center msg">{msg}</p>
                                                 </div>
                                             </div>
                                         </div>
