@@ -44,7 +44,7 @@ export const Profile = () => {
 
     return (
         <>
-            <div className="col-5 wrapper">
+            <div className="col-4 wrapper">
                 <CProfile
                     userName={`${userName}`}
                 />

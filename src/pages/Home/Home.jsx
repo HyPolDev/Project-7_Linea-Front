@@ -38,7 +38,7 @@ export const Home = () => {
 
     return (
         <>
-            <div className="col-5 wrapper">
+            <div className="col-4 wrapper">
                 {Data?.posts.length > 0 ?
                     <>
                         <Ccreatepost />
