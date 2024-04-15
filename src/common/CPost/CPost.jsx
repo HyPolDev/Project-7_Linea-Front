@@ -67,7 +67,7 @@ export const CPost = ({ post }) => {
                 <div className="col-12 post-heading">
                     <h6 className="post-author">{post.authorName}</h6>
                     {<p className="post-timestamp">@{post.authorName} · {date}</p>}
-                    {userName == rdxUser.credentials.decoded.userName ? (
+                    {post.authorName == rdxUser.credentials.decoded.userName ? (
                         <div className="dropdown">
                             <button className="btn btn-secondary dropdown-toggle" onClick={() => viewEdit()} id="dropdownMenuButton1">
                                 <i className="input-icon uil uil-edit-alt" ></i>
