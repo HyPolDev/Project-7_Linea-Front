@@ -42,10 +42,11 @@ export const Profile = () => {
         navigate("/")
     }
 
+    console.log(Data?.profile);
 
     return (
         <>
-            <div className="col-4 wrapper">
+            <div className="col-5 wrapper">
                 <CProfile
                     userName={`${userName}`}
                 />

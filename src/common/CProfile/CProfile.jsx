@@ -5,12 +5,15 @@ import { useSelector, useDispatch } from "react-redux";
 import { userData, logout } from "../../app/slices/userSlice";
 import { useEffect, useState } from "react";
 import { CLink } from "../CLink/CLink";
+import { ButtonC } from "../ButtonC/ButtonC";
+import { Ceditprofile } from "../Ceditprofile/Ceditprofile";
 
 export const CProfile = ({ userName }) => {
     const navigate = useNavigate();
     const rdxUser = useSelector(userData);
 
     const [Data, setData] = useState(null)
+
 
     useEffect(() => {
 
@@ -32,6 +35,16 @@ export const CProfile = ({ userName }) => {
         navigate("/")
     }
 
+    const form = document.getElementById("edit-id") || undefined
+
+    const editProfile = () => {
+        form.style.visibility == "hidden" ?
+            (form.style.visibility = "visible",
+                form.style.height = "auto") :
+            (form.style.visibility = "hidden",
+                form.style.height = "0")
+    }
+
     return (
         <>
             <div className="heading">
@@ -42,6 +55,11 @@ export const CProfile = ({ userName }) => {
                     <h3 className="user-name">{userName}</h3>
                     <p className="n-posts">{Data?.posts?.length} Posts</p>
                 </div>
+                <ButtonC
+                    title={"Edit"}
+                    className={"btn mt-4 ml-5 edit-button"}
+                    functionEmit={editProfile}
+                />
             </div>
             <div className="row-12 heading-background"></div>
             <div className="row full-name">
@@ -89,6 +107,14 @@ export const CProfile = ({ userName }) => {
                 }
 
             </div>
+
+            {userName == rdxUser.credentials.decoded.userName ? (
+                <div className="edit-profile" id="edit-id" style={{ position: "relative", height: 0, visibility: "hidden" }}>
+                    <Ceditprofile
+                        userData={Data?.profile} />
+                </div>
+            ) : ""
+            }
         </>
     )
 }

@@ -11,6 +11,13 @@ body {
 
 }
 
+.background {
+    position: fixed;
+    user-select: none;
+    font-size: 100vh;
+    align-self: center;
+}
+
 #bigbox {
     height: 100vh;
     width: 100vw;
@@ -215,4 +222,8 @@ h6 span {
     background-color: #000000;
     color: #ffffff;
     box-shadow: 0 8px 24px 0 rgba(16, 39, 112, .2);
+}
+
+.msg {
+    color: red;
 }

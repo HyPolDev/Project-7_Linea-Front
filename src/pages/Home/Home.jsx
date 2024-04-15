@@ -6,6 +6,7 @@ import { useSelector } from "react-redux";
 import { userData, logout } from "../../app/slices/userSlice";
 import { useState, useEffect } from "react";
 import { getPostsCall } from "../../services/apiCalls";
+import { Ccreatepost } from "../../common/Ccreatepost/Ccreatepost";
 
 
 export const Home = () => {
@@ -20,7 +21,7 @@ export const Home = () => {
 
         const fetchData = async () => {
             const Posts = await getPostsCall(rdxUser.credentials.token)
-            console.log("POSTS", Posts);
+
             setData({
                 posts: Posts.posts
             })
@@ -37,9 +38,10 @@ export const Home = () => {
 
     return (
         <>
-            <div className="col-4 wrapper">
+            <div className="col-5 wrapper">
                 {Data?.posts.length > 0 ?
                     <>
+                        <Ccreatepost />
                         <div>{Data?.posts?.map((element) => {
                             return (
                                 <CPost

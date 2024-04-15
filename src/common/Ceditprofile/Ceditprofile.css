@@ -1,0 +1,11 @@
+.form-group {
+    position: absolute;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.form-edit {
+    position: static;
+    z-index: 1;
+}
