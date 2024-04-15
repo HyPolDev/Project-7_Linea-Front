@@ -211,3 +211,30 @@ export const likePostCall = async (token, postId) => {
         return error;
     }
 };
+
+export const editpostCall = async (token, body) => {
+
+    const options = {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json",
+            Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify(body)
+    };
+
+    try {
+        console.log("0");
+        const response = await fetch(root + "/posts/", options);
+
+        const data = await response.json();
+
+        if (!data.success) {
+            throw new Error(data.message);
+        }
+
+        return data;
+    } catch (error) {
+        return error;
+    }
+};
