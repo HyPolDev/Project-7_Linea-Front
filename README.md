@@ -1,6 +1,10 @@
 # Social Network React FrontEnd
   ¡Welcome all to my social media front reporsitory! This the seventh project at GeeksHubs Academy, consisting in the frontend in React of a social media site, in this case, one based on Tweeter, now X
 
+  <img src="./img/Login-Fake-Tweeter.png"/>
+  <img src="./img/Profile-Fake-Tweeter.png"/>
+  <img src="./img/Captura de pantalla 2024-03-20 120808.png"/>
+
 ## 🛠️ Tech&Tolls used 
 
 <img src="https://img.shields.io/badge/React-100000?style=for-the-badge&logo=React&logoColor=white" alt="GitHub" /><img src="https://img.shields.io/badge/Node.js-43853D?style=for-the-badge&logo=node.js&logoColor=white" alt="HTML5" /><img src="https://img.shields.io/badge/JavaScript-323330?style=for-the-badge&logo=javascript&logoColor=F7DF1E" alt="CSS" />
