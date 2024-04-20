@@ -61,6 +61,13 @@ export const CPost = ({ post }) => {
         }
     }
 
+    const navigatePost = () => {
+
+        const postObj = JSON.stringify(post)
+        localStorage.setItem("post", postObj)
+        navigate("/post")
+    }
+
     return (
         <>
             <div className="row-12 ">
@@ -78,7 +85,7 @@ export const CPost = ({ post }) => {
                     }
                 </div>
             </div>
-            <div className="row-10 text">
+            <div className="row-10 text" onClick={() => navigatePost()}>
                 {`${post.text}`}
             </div>
             <div className="row-12">
