@@ -26,7 +26,6 @@
     left: 0;
     font-size: 0.9rem;
     color: white;
-    cursor: pointer;
 }
 
 #heart {
@@ -60,4 +59,36 @@
     position: relative;
     top: -6.5em;
     height: 0;
+}
+
+.heading {
+    position: fixed;
+    height: 3rem;
+    margin-top: 0em;
+    display: flex;
+    flex-direction: row;
+    z-index: 3;
+}
+
+.arrow {
+    font-size: 3em;
+    color: white;
+    cursor: pointer;
+    top: revert;
+    left: revert;
+}
+
+.arrow-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: none;
+    min-height: 3rem;
+    min-width: 3rem;
+    max-height: 3rem;
+    max-width: 3rem;
+    top: 1.2rem;
+    left: 1rem;
+    background-color: black;
+    border-radius: 100%;
 }

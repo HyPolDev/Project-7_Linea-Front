@@ -7,6 +7,7 @@ import { userData, logout } from "../../app/slices/userSlice";
 import { useEffect } from "react";
 import { Profile } from "../Profile/Profile";
 import { CProfile } from "../../common/CProfile/CProfile";
+import { Post } from "../Post/Post";
 
 export const Body = () => {
 
@@ -25,6 +26,7 @@ export const Body = () => {
                         <Route path="*" element={<Navigate to={"/"} replace />} />
                         <Route path="/" element={<Home />} />
                         <Route path="/Profile" element={<Profile />} />
+                        <Route path="/post" element={<Post />} />
                     </Routes>
                 </>)
                 : (<Login />)}
