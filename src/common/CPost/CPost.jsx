@@ -15,6 +15,8 @@ export const CPost = ({ post }) => {
     const navigate = useNavigate();
     const rdxUser = useSelector(userData);
     const userName = rdxUser.credentials.decoded.userName
+    const role = rdxUser.credentials.decoded.roleName
+    console.log("ROLE", rdxUser.credentials.decoded.roleName);
     const token = rdxUser.credentials.token
 
     const [Txt, setTxt] = useState({ id: post?._id })
@@ -74,7 +76,7 @@ export const CPost = ({ post }) => {
                 <div className="col-12 post-heading">
                     <h6 className="post-author">{post.authorName}</h6>
                     {<p className="post-timestamp">@{post.authorName} · {date}</p>}
-                    {post.authorName == rdxUser.credentials.decoded.userName ? (
+                    {post.authorName == rdxUser.credentials.decoded.userName || role == "admin" || role == "superadmin" ? (
                         <div className="dropdown">
                             <button className="btn btn-secondary dropdown-toggle" onClick={() => viewEdit()} id="dropdownMenuButton1">
                                 <i className="input-icon uil uil-edit-alt" ></i>
