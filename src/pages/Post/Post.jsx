@@ -69,9 +69,10 @@ export const Post = () => {
 
     return (
         <>
-            <div className="row-12">
+            <div className="col-4">
+
                 <div className="heading">
-                    <div className="col-2 arrow-box" onMouseUp={() => navigateHome()}>
+                    <div className="col-3 arrow-box" onMouseUp={() => navigateHome()}>
                         <i className="input-icon uil uil-arrow-left arrow"></i>
                     </div>
                 </div>
@@ -128,6 +129,7 @@ export const Post = () => {
                         functionEmit={editPost}
                     />
                 </div>
+
             </div>
         </>
     )

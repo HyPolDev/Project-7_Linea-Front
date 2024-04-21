@@ -9,6 +9,7 @@ import { ButtonC } from "../ButtonC/ButtonC";
 import { Ceditprofile } from "../Ceditprofile/Ceditprofile";
 
 export const CProfile = ({ userName }) => {
+
     const navigate = useNavigate();
     const rdxUser = useSelector(userData);
 
@@ -47,17 +48,17 @@ export const CProfile = ({ userName }) => {
 
     return (
         <>
-            <div className="heading">
+            <div className="heading profile-heading">
                 <div className="col-2 arrow-box" onMouseUp={() => navigateHome()}>
                     <i className="input-icon uil uil-arrow-left arrow"></i>
                 </div>
-                <div className="col-10">
+                <div className="col-8">
                     <h3 className="user-name">{userName}</h3>
                     <p className="n-posts">{Data?.posts?.length} Posts</p>
                 </div>
                 <ButtonC
                     title={"Edit"}
-                    className={"btn mt-4 ml-5 edit-button"}
+                    className={"btn mt-4 edit-button"}
                     functionEmit={editProfile}
                 />
             </div>
