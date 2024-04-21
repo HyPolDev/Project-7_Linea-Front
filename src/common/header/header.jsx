@@ -50,7 +50,7 @@ export const Header = () => {
                     {rdxUser?.credentials.decoded?.roleName == "admin" || rdxUser?.credentials.decoded?.roleName == "superadmin" ?
                         (<>
                             <div id="link"><CLink path="/Profiles" title="Profiles" /></div>
-                            <div id="link"><CLink path="/profile" title="Posts" /></div>
+                            <div id="link"><CLink path="/Posts" title="Posts" /></div>
                         </>) : ""}
                 </div>
             ) : (

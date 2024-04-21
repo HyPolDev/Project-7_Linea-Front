@@ -9,6 +9,7 @@ import { Profile } from "../Profile/Profile";
 import { CProfile } from "../../common/CProfile/CProfile";
 import { Post } from "../Post/Post";
 import { AdminProfiles } from "../AdminProfiles/AdminProfiles";
+import { AdminPosts } from "../AdminPosts/AdminPosts";
 
 export const Body = () => {
 
@@ -29,6 +30,7 @@ export const Body = () => {
                         <Route path="/Profile" element={<Profile />} />
                         <Route path="/post" element={<Post />} />
                         <Route path="/Profiles" element={<AdminProfiles />} />
+                        <Route path="/Posts" element={<AdminPosts />} />
                     </Routes>
                     <div className="col-4" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>Future chats and Search bar</div>
                 </>)
