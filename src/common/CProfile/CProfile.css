@@ -1,5 +1,5 @@
-.heading {
-    position: fixed;
+.profile-heading {
+    position: relative !important;
     height: 3rem;
     margin-top: 0em;
     display: flex;
@@ -13,7 +13,6 @@
     border-left: 1px solid rgba(255, 255, 255, 0.275);
     width: 40.3vw;
     position: fixed;
-    background-color: black;
     z-index: 2;
 }
 

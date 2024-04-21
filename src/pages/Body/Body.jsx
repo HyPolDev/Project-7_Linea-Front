@@ -8,6 +8,7 @@ import { useEffect } from "react";
 import { Profile } from "../Profile/Profile";
 import { CProfile } from "../../common/CProfile/CProfile";
 import { Post } from "../Post/Post";
+import { AdminProfiles } from "../AdminProfiles/AdminProfiles";
 
 export const Body = () => {
 
@@ -27,7 +28,9 @@ export const Body = () => {
                         <Route path="/" element={<Home />} />
                         <Route path="/Profile" element={<Profile />} />
                         <Route path="/post" element={<Post />} />
+                        <Route path="/Profiles" element={<AdminProfiles />} />
                     </Routes>
+                    <div className="col-4" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>Future chats and Search bar</div>
                 </>)
                 : (<Login />)}
 

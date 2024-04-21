@@ -9,7 +9,6 @@ import { useEffect } from "react";
 export const Header = () => {
     //Instancia de conexion a modo lectura
     const rdxUser = useSelector(userData);
-
     //Instancia de conexion a modo escritura
     const dispatch = useDispatch();
 
@@ -48,6 +47,11 @@ export const Header = () => {
                     >
                         log out
                     </div>
+                    {rdxUser?.credentials.decoded?.roleName == "admin" || rdxUser?.credentials.decoded?.roleName == "superadmin" ?
+                        (<>
+                            <div id="link"><CLink path="/Profiles" title="Profiles" /></div>
+                            <div id="link"><CLink path="/profile" title="Posts" /></div>
+                        </>) : ""}
                 </div>
             ) : (
                 <div className="navigator-design">
