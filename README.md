@@ -4,7 +4,8 @@
   <img src="./img/Login-Fake-Tweeter.png"/>
   <img src="./img/Profile-Fake-Tweeter.png"/>
   <img src="./img/Admin-Posts.png"/>
-  <img src="./img/Admin-Profiles.png.png"/>
+  <img src="./img/Admin-Profiles.png"/>
+  <img src="./img/Post-in-detail.png"/>
   <img src="./img/Captura de pantalla 2024-03-20 120808.png"/>
 
 ## 🛠️ Tech&Tolls used 
